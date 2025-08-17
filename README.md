@@ -11,3 +11,4 @@
 
 
 
+Please contact me at infovinodjangid@gmail.com if you have any feedback for the website. :star: Star it, if you like it!

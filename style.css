@@ -1,3 +1,13 @@
+  /* _____     _                       ____                _           
+ | ____|___| |__   __ _ _ __ __ _  |  _ \ __ _ ___  ___| |__   __ _ 
+ |  _| / __| '_ \ / _` | '__/ _` | | |_) / _` / __|/ __| '_ \ / _` |
+ | |__| (__| | | | (_| | | | (_| | |  __/ (_| \__ \ (__| | | | (_| |
+ |_____\___|_| |_|\__,_|_|  \__,_| |_|   \__,_|___/\___|_| |_|\__,_|
+ */
+
+
+                                                                     
+
 #labelforsetting,
 #labelforvisualmode,
 #switchforvisualmode:checked+#labelforvisualmode {
@@ -1140,7 +1150,7 @@ footer {
     position: relative
 }
 .footer-form h2 {
-  margin-bottom: 1.8rem; 
+  margin-bottom: 1.8rem; /* 🔥 kasih jarak heading ke form */
   font-size: 2rem;
 }
 
@@ -2034,100 +2044,167 @@ footer {
   }
 
   .responsive-model {
-    display: block !important;   
+    display: block !important;  
     width: 100%;
     max-width: 350px;
-    height: 700px;             
+    height: 700px;              
     margin-top: 20px;           
   }
 }
-/* ===== Footer Form ===== */
+/* === Footer Contact Form Styling (Update) === */
 .footer-form {
-  max-width: 900px;    
-  width: 100%;          
-  margin: 0 auto 3rem auto;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  margin: 50px auto 0;
+  max-width: 700px;  
+  width: 95%;        
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
   text-align: center;
-  padding: 0 1rem;        
+  animation: fadeInUp 0.8s ease;
 }
 
-.footer-form__title {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
+.footer-form h2 {
+  font-size: 2.2rem;
+  color: var(--color-white);
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.footer-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
+/* Input & Textarea */
 .footer-form input,
 .footer-form textarea {
   width: 100%;
-  padding: 16px 18px; /* lebih besar */
-  border: 1px solid #ccc;
+  padding: 16px 20px;
+  margin: 14px 0;
   border-radius: 12px;
-  font-size: 1.1rem; /* font lebih besar */
-  font-family: inherit;
-  background-color: #fff;
-  color: #333;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-white);
+  font-size: 1.2rem;  
   outline: none;
-  transition: all 0.3s ease;
-}
-
-.footer-form input:focus,
-.footer-form textarea:focus {
-  border-color: #6c63ff;
-  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
-}
-
-.footer-form__btn {
-  background: #6c63ff;
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 14px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
   transition: 0.3s ease;
 }
 
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;   
+}
+
+/* Saat fokus */
+.footer-form input:focus,
+.footer-form textarea:focus {
+  border-color: var(--color-accent, #6a5acd);
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+/* Button */
+.footer-form__btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #141d36, #280ae9, #141d36);
+  color: #fff;
+  font-size: 1.3rem;  
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+
 .footer-form__btn:hover {
-  background: #574bdb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
 }
 
-/* Dark Mode Support */
-.dark-mode .footer-form input,
-.dark-mode .footer-form textarea {
-  background: #222;
-  color: #eee;
-  border: 1px solid #444;
+/* === Alert Message === */
+.alert {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.1rem;   
+  font-weight: 500;
+  animation: fadeIn 0.6s ease;
 }
 
-.dark-mode .footer-form__btn {
-  background: #8e7dff;
+.alert-success {
+  background: rgba(0, 255, 128, 0.15);
+  border: 1px solid rgba(0, 255, 128, 0.4);
+  color: #00ff9d;
 }
 
-.dark-mode .footer-form__btn:hover {
-  background: #6c63ff;
+.alert-error {
+  background: rgba(255, 0, 80, 0.15);
+  border: 1px solid rgba(255, 0, 80, 0.4);
+  color: #ff4f70;
 }
+
 
 @media screen and (max-width: 998px) {
   .landing-page-container {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: auto; 
-    padding: 50px 0; 
+    height: auto; /* biar tidak terbatas 1 layar */
+    padding: 50px 0; /* kasih jarak atas-bawah biar rapi */
   }
 
   model-viewer,
   .responsive-model {
     width: 100%;
     max-width: 400px;
-    height: 700px; 
+    height: 700px;
     margin-top: 20px;
   }
+}
+/* === FOOTER LIGHT MODE === */
+body.light-mode #footer {
+  background: #fff; 
+  color: #000;      
+}
+
+body.light-mode .footer-background {
+  background: #fff; 
+}
+
+body.light-mode .footer-blob {
+  background: rgba(0, 0, 0, 0.05); 
+}
+
+body.light-mode .footer-form {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .footer-form h2,
+body.light-mode .footer-form input,
+body.light-mode .footer-form textarea,
+body.light-mode .footer-form button,
+body.light-mode .footercontainer,
+body.light-mode .two-words,
+body.light-mode .social-media-container {
+  color: #000; 
+}
+
+body.light-mode .footer-form input,
+body.light-mode .footer-form textarea {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #000;
+}
+
+body.light-mode .footer-form input::placeholder,
+body.light-mode .footer-form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+body.light-mode .footer-form__btn {
+  background: linear-gradient(135deg, #141d36, #280ae9, #141d36); 
+  color: #000;
 }
