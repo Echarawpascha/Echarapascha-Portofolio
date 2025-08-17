@@ -1140,7 +1140,7 @@ footer {
     position: relative
 }
 .footer-form h2 {
-  margin-bottom: 1.8rem; /* 🔥 kasih jarak heading ke form */
+  margin-bottom: 1.8rem; 
   font-size: 2rem;
 }
 
@@ -2034,16 +2034,20 @@ footer {
   }
 
   .responsive-model {
-    display: none;
+    display: block !important;   
+    width: 100%;
+    max-width: 350px;
+    height: 700px;             
+    margin-top: 20px;           
   }
 }
 /* ===== Footer Form ===== */
 .footer-form {
-  max-width: 900px;       /* 🔥 lebih lebar */
-  width: 100%;            /* biar fleksibel */
+  max-width: 900px;    
+  width: 100%;          
   margin: 0 auto 3rem auto;
   text-align: center;
-  padding: 0 1rem;        /* ada sedikit padding kiri kanan */
+  padding: 0 1rem;        
 }
 
 .footer-form__title {
@@ -2108,4 +2112,22 @@ footer {
 
 .dark-mode .footer-form__btn:hover {
   background: #6c63ff;
+}
+
+@media screen and (max-width: 998px) {
+  .landing-page-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto; 
+    padding: 50px 0; 
+  }
+
+  model-viewer,
+  .responsive-model {
+    width: 100%;
+    max-width: 400px;
+    height: 700px; 
+    margin-top: 20px;
+  }
 }
