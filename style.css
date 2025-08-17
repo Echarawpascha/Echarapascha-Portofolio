@@ -93,8 +93,8 @@ html {
     --color-light-mode: #ece7e1;
     --color-ddd-color: #ddd;
     --color-gray: #c4c4c4;
-    --color-purple: #8000ff;
-    --color-light-purple: #cf59e6;
+    --color-purple: #0c17b3d0;
+    --color-light-purple: #150baa;
     --color-light-blue: #6bc5f8;
     --color-navbarBorder-dark: #e2e2e207;
     --color-shadowDark: rgba(0, 0, 0, 0.137);
@@ -123,7 +123,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #8000ff
+    background-color: #111ba0
 }
 
 .cursor-inner {
@@ -702,15 +702,6 @@ noscript {
     margin: 0 12px 0 0
 }
 
-.jello:hover {
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: #03e6ff;
-    -webkit-animation: .9s both jello-vertical;
-    animation: .9s both jello-vertical
-}
-
 #backtotopbutton,
 .dp::after,
 .dp::before,
@@ -1148,6 +1139,11 @@ noscript {
 footer {
     position: relative
 }
+.footer-form h2 {
+  margin-bottom: 1.8rem; /* 🔥 kasih jarak heading ke form */
+  font-size: 2rem;
+}
+
 
 .projects-section-container {
     padding: 150px 0;
@@ -2016,4 +2012,122 @@ footer {
         height: fit-content;
         margin-top: 100px;  
     }
+}
+
+.intro-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.responsive-model {
+  width: 350px;
+  height: 1000px;
+}
+
+@media (max-width: 768px) {
+  .intro-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .responsive-model {
+    display: block !important;   /* paksa tampil */
+    width: 100%;
+    max-width: 350px;
+    height: 700px;              /* kasih tinggi biar kelihatan */
+    margin-top: 20px;           /* jarak dari tombol */
+  }
+}
+/* ===== Footer Form ===== */
+.footer-form {
+  max-width: 900px;       /* 🔥 lebih lebar */
+  width: 100%;            /* biar fleksibel */
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  padding: 0 1rem;        /* ada sedikit padding kiri kanan */
+}
+
+.footer-form__title {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.footer-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-form input,
+.footer-form textarea {
+  width: 100%;
+  padding: 16px 18px; /* lebih besar */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1.1rem; /* font lebih besar */
+  font-family: inherit;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.footer-form input:focus,
+.footer-form textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+}
+
+.footer-form__btn {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-form__btn:hover {
+  background: #574bdb;
+}
+
+/* Dark Mode Support */
+.dark-mode .footer-form input,
+.dark-mode .footer-form textarea {
+  background: #222;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+.dark-mode .footer-form__btn {
+  background: #8e7dff;
+}
+
+.dark-mode .footer-form__btn:hover {
+  background: #6c63ff;
+}
+
+@media screen and (max-width: 998px) {
+  .landing-page-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto; /* biar tidak terbatas 1 layar */
+    padding: 50px 0; /* kasih jarak atas-bawah biar rapi */
+  }
+
+  model-viewer,
+  .responsive-model {
+    width: 100%;
+    max-width: 400px;
+    height: 700px; /* sesuai keinginan kamu */
+    margin-top: 20px;
+  }
 }
