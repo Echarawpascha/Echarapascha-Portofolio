@@ -1,4 +1,4 @@
-# <a href="https://vinodjangid07.github.io/" target="_blank">My Portfolio</a>
+# <a href="https://vinodjangid07.github.io/" target="_blank">Echara'Pascha Portfolio Website</a>
 <p align="justify">This website displays my Projects, Web presence, Story, Work experience, and contact information.</p>
 
 # Sections 📚
@@ -12,3 +12,4 @@
 
 
 Please contact me at infovinodjangid@gmail.com if you have any feedback for the website. :star: Star it, if you like it!
+
