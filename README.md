@@ -6,7 +6,8 @@
 ✔️ Projects\
 ✔️ Contact me
 
-<p align="justify">Preview Echara'Pascha Portfolio Website </p>
+<p align="justify">Preview Echara'Pascha Portfolio Website's </p>
+
 
 
 
