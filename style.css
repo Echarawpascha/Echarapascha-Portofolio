@@ -966,6 +966,65 @@ noscript {
     justify-content: center
 }
 
+.about-bottom {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;      /* stack vertically */
+  justify-content: center;
+  align-items: center;         /* center horizontally */
+  gap: 20px;                   /* gap between github card and discord row */
+}
+
+.discord-cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;                   /* gap between discord cards */
+  width: 100%;
+  max-width: 720px;
+}
+
+.about-card {
+  background-image: linear-gradient(to bottom right, var(--tech-stack-box-first-color), var(--tech-stack-box-second-color));
+  border: 1px solid var(--tech-stack-box-border-color);
+  padding: 12px 15px;          /* 🔥 kecilin padding biar pendek */
+  border-radius: 12px;
+  text-align: center;
+  width: 240px;                /* lebih kecil */
+  max-height: 280px;           /* 🔥 batas tinggi card */
+  overflow: hidden;            /* biar konten panjang nggak meluber */
+}
+
+.github-card {
+  width: 100%;
+  max-width: 600px;
+}
+
+.github-card {
+  width: 100%;
+  max-width: 720px;
+  flex: 1 1 100%;
+}
+
+.github-card img {
+  width: 100%;
+  height: auto;
+}
+
+.about-card h3 {
+  font-family: "Fira Code", monospace;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: var(--color-white);
+}
+
+.about-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+
 .projects-heading,
 .section-heading,
 .skills-heading {
