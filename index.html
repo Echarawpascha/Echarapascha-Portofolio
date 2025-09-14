@@ -167,20 +167,28 @@
         </div>
       </div>
     </div>
-      <model-viewer 
-          src="id-card-EcharaPascha.compressed.glb" 
+      <model-viewer
+          src="id-card-EcharaPascha.compressed.glb"
           alt="My 3D Model"
-          camera-controls 
+          camera-controls
           auto-rotate
-          disable-pan 
+          disable-pan
           touch-action="pan-y"
           field-of-view="1deg"
           exposure="8"
           min-camera-orbit="auto auto 33m"
           max-camera-orbit="auto auto 20m"
+          disable-zoom
           camera-orbit="auto auto 6m"
           class="responsive-model">
       </model-viewer>
+  </div>
+  <div class="scroll-down-icon" aria-label="Scroll down icon" tabindex="0" role="button" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">
+    <div class="scroll-text">Scroll Down</div>
+    <svg width="40" height="40" viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="6" y="2" width="12" height="36" rx="6" ry="6" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
   </div>
 </section>
     
@@ -207,10 +215,13 @@
         <!-- Social & Stats Section -->
         <div class="about-bottom">
           <div class="about-card github-card" style="width: 100%; max-width: 600px;">
-            
+              <a href="https://github.com/Echarawpascha" target="_blank">
             <img src="https://ghchart.rshah.org/32CD32/Echarawpascha" alt="GitHub Chart" style="width: 100%; height: auto;">
+            </a>
           </div>
 
+          <div class="discord-cards-row">
+          </div>
         </div>
 
         <button class="resume-btn" id="resume-btn" onclick="openURL()">
@@ -473,11 +484,31 @@
           &#60;/Contact Me&#62;
         </h2>
         <form id="contact-form" action="https://formspree.io/f/meozzldn" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <div class="input-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="input-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="input-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21.99 4c0-1.1-.89-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+            </svg>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
           <input type="hidden" name="_subject" value="New message from portfolio footer" />
-          <button type="submit" class="footer-form__btn">Send</button>
+          <button type="submit" class="footer-form__btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px; margin-right: 8px;">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+            Send
+          </button>
         </form>
       </div>
 
@@ -592,6 +623,8 @@
     });
   </script>
  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+
+ 
 </body>
 
 
